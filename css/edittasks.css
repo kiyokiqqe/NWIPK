@@ -1,0 +1,102 @@
+/* Загальні стилі для edit_task */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 80px;
+}
+
+h2 {
+    color: #00D4FF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00D4FF;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1A1A1A;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #00D4FF;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(45deg, #007BFF, #00D4FF);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Додаткові стилі для статусу, пріоритету та дедлайну */
+select {
+    appearance: none;
+    background: #1A1A1A url('../img/dropdown-arrow.png') no-repeat right 10px center;
+    background-size: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+

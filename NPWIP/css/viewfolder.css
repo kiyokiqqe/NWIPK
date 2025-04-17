@@ -1,0 +1,184 @@
+/* Загальні стилі для view_folder */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Хедер */
+header {
+    background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header nav ul a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Контент */
+.dashboard-container {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 80px;
+}
+
+h2, h3 {
+    color: #00D4FF;
+    margin-bottom: 15px;
+}
+
+/* Додаємо відступ перед "Список завдань" */
+h3 {
+    margin-top: 20px; /* Додає відступ перед списком завдань */
+}
+
+/* Поля вводу */
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #007BFF;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #00D4FF;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    outline: none;
+}
+
+/* Кнопки */
+button, .btn-create-task {
+    background: linear-gradient(45deg, #007BFF, #00D4FF);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .btn-create-task:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Менші та менш яскраві кнопки (перегляд, редагування, видалення) */
+.btn-view, .btn-edit, .btn-delete {
+    background: linear-gradient(45deg, #0056b3, #0084ff);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 6px rgba(0, 84, 255, 0.3);
+}
+
+.btn-delete {
+    background: linear-gradient(45deg, #b30000, #ff4d4d);
+}
+
+/* Список завдань */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #252525;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.task-item:hover {
+    background-color: #333333;
+}
+
+.task-name {
+    font-size: 18px;
+    color: #00D4FF;
+    font-weight: bold;
+}
+
+.deadline {
+    font-size: 14px;
+    color: #bbbbbb;
+}
